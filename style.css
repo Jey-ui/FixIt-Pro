@@ -1,0 +1,170 @@
+:root {
+    --dark-brown: #5d4037;
+    --light-beige: #fdfaf5;
+    --warm-brown: #8d6e63;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--light-beige);
+    color: var(--dark-brown);
+    text-align: center;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-brown);
+    color: var(--light-beige);
+    padding: 15px 30px;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-header .header-left h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.main-header .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-header .header-right a {
+    color: var(--light-beige);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.main-header .header-right a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Services Cards */
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px;
+    margin-bottom: 230px; /* مسافة كبيرة بين الخدمات والفوتر */
+}
+
+.service-card {
+    background-color: var(--light-beige);
+    width: 280px;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom: 6px solid var(--warm-brown);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--warm-brown);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--dark-brown);
+}
+
+/* Request Form */
+.form-container {
+    width: 90%;
+    max-width: 450px;
+    margin: 40px auto;
+    background-color: var(--light-beige);
+    padding: 20px;
+    border-radius: 25px;
+    border-bottom: 6px solid var(--warm-brown);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    text-align: left;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    background-color: var(--warm-brown);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+footer {
+    background-color: #5d4037; /* بني غامق */
+    color: #fdfaf5; /* نصوص فاتحة */
+    padding: 15px 30px;
+    border-radius: 0; /* حواف دائرية */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button:hover {
+    background-color: var(--dark-brown);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .services-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
