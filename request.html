@@ -6,7 +6,6 @@
 </head>
 <body>
 
-<!-- Header -->
 <header class="main-header">
     <div class="header-left">
         <h1>FixIt Pro</h1>
@@ -19,23 +18,24 @@
     </div>
 </header>
 
-<!-- Request Form -->
 <section class="form-container">
     <h2>Service Request Form</h2>
 
     <form id="requestForm">
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your full name">
 
-        <label>Select Service</label>
-        <select>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+
+        <label for="service">Select Service</label>
+        <select id="service">
+            <option value="">-- Choose Service --</option>
             <option>Plumbing</option>
             <option>Electrical</option>
             <option>Cleaning</option>
         </select>
 
-        <label>Describe Your Problem</label>
-        <textarea placeholder="Write details here..."></textarea>
+        <label for="problem">Describe Your Problem</label>
+        <textarea id="problem" placeholder="Write details here..."></textarea>
 
         <button type="submit">Submit Request</button>
     </form>
